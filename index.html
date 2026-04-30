@@ -18,36 +18,36 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background-color: #ffffff; overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Navigation - Updated for Call CTA besides Logo */
+        /* Navigation - UPDATED: Logo left, Call CTA right */
         nav {
             background: var(--white);
             padding: 0.8rem 5%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* This pushes items to opposite sides */
             align-items: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 2000;
         }
-        .logo-group { display: flex; align-items: center; gap: 20px; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--royal-indigo); font-weight: 700; text-decoration: none; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--royal-indigo); font-weight: 700; text-decoration: none; letter-spacing: 1px; }
         
-        /* Call CTA in Nav */
+        /* Call CTA in Nav on the right side */
         .nav-call-btn {
             background: var(--royal-indigo);
             color: white;
-            padding: 8px 18px;
+            padding: 10px 22px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: 0.3s;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
         }
-        .nav-call-btn:hover { background: var(--solar-gold); color: var(--royal-indigo); }
+        .nav-call-btn:hover { background: var(--solar-gold); color: var(--royal-indigo); transform: translateY(-2px); }
 
         /* Hero Section */
         .hero {
@@ -89,7 +89,7 @@
         }
         .cta-btn:hover { background: #fff; transform: translateY(-3px); }
 
-        /* Sections */
+        /* Services */
         .section-padding { padding: 80px 5%; }
         .section-title { text-align: center; font-size: 2.5rem; color: var(--royal-indigo); margin-bottom: 40px; font-weight: 900; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
@@ -130,24 +130,21 @@
         }
 
         @media (max-width: 768px) {
+            nav { padding: 0.8rem 4%; }
+            .logo { font-size: 1.4rem; }
+            .nav-call-btn { padding: 8px 14px; font-size: 0.8rem; }
             .hero h1 { font-size: 2.2rem; }
             .hero-text-box { padding: 30px 20px; }
-            .logo-group { gap: 10px; }
-            .logo { font-size: 1.4rem; }
-            .nav-call-btn { padding: 6px 12px; font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="logo-group">
-        <a href="#" class="logo">ESTRADA'S</a>
-        <a href="tel:5124762850" class="nav-call-btn">
-            <i class="fas fa-phone"></i> CALL NOW
-        </a>
-    </div>
-    <!-- Nav links removed as requested -->
+    <a href="#" class="logo">ESTRADA'S</a>
+    <a href="tel:5124762850" class="nav-call-btn">
+        <i class="fas fa-phone"></i> CALL NOW
+    </a>
 </nav>
 
 <section class="hero">
