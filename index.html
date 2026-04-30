@@ -16,27 +16,43 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; background-color: #ffffff; overflow-x: hidden; }
+        body { font-family: 'Outfit', sans-serif; background-color: #ffffff; overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Navigation */
+        /* Navigation - Updated for Call CTA besides Logo */
         nav {
             background: var(--white);
-            padding: 1rem 5%;
+            padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 2000;
         }
-        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--royal-indigo); font-weight: 700; }
-        .nav-links a { text-decoration: none; color: var(--royal-indigo); font-weight: 600; margin-left: 20px; font-size: 0.9rem; }
+        .logo-group { display: flex; align-items: center; gap: 20px; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--royal-indigo); font-weight: 700; text-decoration: none; }
+        
+        /* Call CTA in Nav */
+        .nav-call-btn {
+            background: var(--royal-indigo);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-call-btn:hover { background: var(--solar-gold); color: var(--royal-indigo); }
 
-        /* Hero Section with fixed storefront path */
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
-                        url("./unnamed%20(1)_5.webp"); 
+                        url("./unnamed (1)_5.webp"); 
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -50,7 +66,7 @@
         
         .hero-text-box {
             background: rgba(26, 54, 93, 0.9);
-            padding: 50px;
+            padding: 40px;
             border-radius: 20px;
             border: 2px solid var(--solar-gold);
             max-width: 800px;
@@ -71,67 +87,74 @@
             border: none;
             cursor: pointer;
         }
-        .cta-btn:hover { background: #fff; transform: scale(1.05); }
+        .cta-btn:hover { background: #fff; transform: translateY(-3px); }
 
-        /* Services */
-        .section-padding { padding: 100px 5%; }
-        .section-title { text-align: center; font-size: 2.5rem; color: var(--royal-indigo); margin-bottom: 50px; font-weight: 900; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { padding: 40px; background: var(--light-blue); border-radius: 20px; text-align: center; border: 1px solid #e2e8f0; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); background: #fff; border-color: var(--solar-gold); }
-        .card i { font-size: 3.5rem; color: var(--royal-indigo); margin-bottom: 20px; }
+        /* Sections */
+        .section-padding { padding: 80px 5%; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--royal-indigo); margin-bottom: 40px; font-weight: 900; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { padding: 40px; background: var(--light-blue); border-radius: 20px; text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .card i { font-size: 3rem; color: var(--royal-indigo); margin-bottom: 20px; }
 
         /* Testimonials */
         .testimonials { background: var(--royal-indigo); color: white; }
-        .t-card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; margin-bottom: 20px; }
+        .t-card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; }
         .stars { color: var(--solar-gold); margin-bottom: 10px; }
 
         /* Form */
-        .contact-section { background: var(--light-blue); }
         .form-container { max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 10px; border: 1px solid #ddd; font-family: inherit; }
-
-        /* WhatsApp */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--whatsapp);
-            color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 35px;
-            z-index: 1000;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
+        input, select, textarea { width: 100%; padding: 14px; margin-bottom: 20px; border-radius: 10px; border: 1px solid #ddd; font-family: inherit; }
 
         /* Footer */
         footer { background: var(--royal-indigo); color: white; padding: 60px 5%; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
         .footer-item h3 { color: var(--solar-gold); margin-bottom: 20px; }
-        .footer-item p { margin-bottom: 10px; opacity: 0.8; }
+
+        /* WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--whatsapp);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 3000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero-text-box { padding: 30px 20px; }
+            .logo-group { gap: 10px; }
+            .logo { font-size: 1.4rem; }
+            .nav-call-btn { padding: 6px 12px; font-size: 0.75rem; }
+        }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="logo">ESTRADA'S</div>
-    <div class="nav-links">
-        <a href="#services">SERVICES</a>
-        <a href="#testimonials">REVIEWS</a>
-        <a href="#contact">CONTACT</a>
+    <div class="logo-group">
+        <a href="#" class="logo">ESTRADA'S</a>
+        <a href="tel:5124762850" class="nav-call-btn">
+            <i class="fas fa-phone"></i> CALL NOW
+        </a>
     </div>
+    <!-- Nav links removed as requested -->
 </nav>
 
 <section class="hero">
     <div class="hero-text-box">
-        <div style="background: var(--solar-gold); color: var(--royal-indigo); padding: 5px 15px; border-radius: 5px; font-weight: 900; display: inline-block; margin-bottom: 20px;">ESTABLISHED 1960</div>
-        <h1 style="font-size: 3.5rem; margin-bottom: 10px;">Garment Care Perfected.</h1>
-        <p style="color: var(--solar-gold); font-weight: 600; margin-bottom: 30px;">Premium Cleaning • 1-Hour Service • Tuxedo Rentals</p>
+        <div style="background: var(--solar-gold); color: var(--royal-indigo); padding: 5px 15px; border-radius: 5px; font-weight: 900; display: inline-block; margin-bottom: 15px; font-size: 0.8rem;">ESTABLISHED 1960</div>
+        <h1 style="margin-bottom: 10px;">Garment Care Perfected.</h1>
+        <p style="color: var(--solar-gold); font-weight: 600; margin-bottom: 25px; font-size: 1.1rem;">Premium Cleaning • 1-Hour Service • Tuxedo Rentals</p>
         <div>
             <a href="tel:5124762850" class="cta-btn">Experience 1-Hr Magic</a>
             <a href="tel:5124762850" class="cta-btn" style="background: white;">(512) 476-2850</a>
@@ -146,19 +169,19 @@
             <i class="fa-solid fa-clock"></i>
             <h3>1-Hour Cleaning</h3>
             <p>Ready in 60 minutes. Austin's heritage fast-service since 1960.</p>
-            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 20px;">Book Fast Clean</a>
+            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 15px;">Book Fast Clean</a>
         </div>
         <div class="card">
             <i class="fa-solid fa-shirt"></i>
             <h3>Full Service Laundry</h3>
             <p>Professional wash, dry, and fold with expert care for every fiber.</p>
-            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 20px;">Schedule Laundry</a>
+            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 15px;">Schedule Laundry</a>
         </div>
         <div class="card">
             <i class="fa-solid fa-user-tie"></i>
             <h3>Tuxedo Rentals</h3>
             <p>Premium fits and professional styling for your most important events.</p>
-            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 20px;">Rent Your Suit</a>
+            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 15px;">Rent Your Suit</a>
         </div>
     </div>
 </section>
@@ -181,7 +204,7 @@
     </div>
 </section>
 
-<section id="contact" class="section-padding contact-section">
+<section id="contact" class="section-padding" style="background: var(--light-blue);">
     <h2 class="section-title">Request a Quote</h2>
     <div class="form-container">
         <form action="https://formspree.io/f/estradacleaners@yahoo.com" method="POST">
@@ -202,13 +225,13 @@
 <footer>
     <div class="footer-grid">
         <div class="footer-item">
-            <div class="logo" style="color: #fff; margin-bottom: 20px;">ESTRADA'S</div>
-            <p>Quality garment care and professional styling for the Austin community since 1960.</p>
+            <h2 class="logo" style="color: #fff; margin-bottom: 20px;">ESTRADA'S</h2>
+            <p style="opacity: 0.8;">Quality garment care and professional styling for the Austin community since 1960.</p>
         </div>
         <div class="footer-item">
             <h3>LOCATION</h3>
-            <p><i class="fa-solid fa-location-dot"></i> 301 N Main St, Austin, TX 78702</p>
-            <p><i class="fa-solid fa-phone"></i> (512) 476-2850</p>
+            <p style="margin-bottom: 10px;"><i class="fa-solid fa-location-dot"></i> 301 N Main St, Austin, TX 78702</p>
+            <p style="margin-bottom: 10px;"><i class="fa-solid fa-phone"></i> (512) 476-2850</p>
             <p><i class="fa-solid fa-envelope"></i> estradacleaners@yahoo.com</p>
         </div>
         <div class="footer-item">
@@ -218,7 +241,7 @@
             <p>Sun: Closed</p>
         </div>
     </div>
-    <div style="text-align: center; margin-top: 50px; opacity: 0.5; font-size: 0.8rem;">
+    <div style="text-align: center; margin-top: 50px; opacity: 0.5; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
         &copy; 2026 Estrada's Austin. All Rights Reserved.
     </div>
 </footer>
