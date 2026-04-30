@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrada's | Heritage Garment Care Since 1960</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --royal-indigo: #1a365d;
+            --solar-gold: #ffc107;
+            --white: #ffffff;
+            --whatsapp: #25d366;
+            --light-blue: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Outfit', sans-serif; background-color: #ffffff; overflow-x: hidden; }
+        
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--royal-indigo); font-weight: 700; }
+        .nav-links a { text-decoration: none; color: var(--royal-indigo); font-weight: 600; margin-left: 20px; font-size: 0.9rem; }
+
+        /* Hero Section with fixed storefront path */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
+                        url("./unnamed%20(1)_5.webp"); 
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 5%;
+            text-align: center;
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-text-box {
+            background: rgba(26, 54, 93, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid var(--solar-gold);
+            max-width: 800px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .cta-btn {
+            background: var(--solar-gold);
+            color: var(--royal-indigo);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            margin: 10px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-btn:hover { background: #fff; transform: scale(1.05); }
+
+        /* Services */
+        .section-padding { padding: 100px 5%; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--royal-indigo); margin-bottom: 50px; font-weight: 900; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { padding: 40px; background: var(--light-blue); border-radius: 20px; text-align: center; border: 1px solid #e2e8f0; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); background: #fff; border-color: var(--solar-gold); }
+        .card i { font-size: 3.5rem; color: var(--royal-indigo); margin-bottom: 20px; }
+
+        /* Testimonials */
+        .testimonials { background: var(--royal-indigo); color: white; }
+        .t-card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; margin-bottom: 20px; }
+        .stars { color: var(--solar-gold); margin-bottom: 10px; }
+
+        /* Form */
+        .contact-section { background: var(--light-blue); }
+        .form-container { max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 10px; border: 1px solid #ddd; font-family: inherit; }
+
+        /* WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer { background: var(--royal-indigo); color: white; padding: 60px 5%; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-item h3 { color: var(--solar-gold); margin-bottom: 20px; }
+        .footer-item p { margin-bottom: 10px; opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">ESTRADA'S</div>
+    <div class="nav-links">
+        <a href="#services">SERVICES</a>
+        <a href="#testimonials">REVIEWS</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-text-box">
+        <div style="background: var(--solar-gold); color: var(--royal-indigo); padding: 5px 15px; border-radius: 5px; font-weight: 900; display: inline-block; margin-bottom: 20px;">ESTABLISHED 1960</div>
+        <h1 style="font-size: 3.5rem; margin-bottom: 10px;">Garment Care Perfected.</h1>
+        <p style="color: var(--solar-gold); font-weight: 600; margin-bottom: 30px;">Premium Cleaning • 1-Hour Service • Tuxedo Rentals</p>
+        <div>
+            <a href="tel:5124762850" class="cta-btn">Experience 1-Hr Magic</a>
+            <a href="tel:5124762850" class="cta-btn" style="background: white;">(512) 476-2850</a>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section-padding">
+    <h2 class="section-title">Our Heritage Services</h2>
+    <div class="grid">
+        <div class="card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>1-Hour Cleaning</h3>
+            <p>Ready in 60 minutes. Austin's heritage fast-service since 1960.</p>
+            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 20px;">Book Fast Clean</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-shirt"></i>
+            <h3>Full Service Laundry</h3>
+            <p>Professional wash, dry, and fold with expert care for every fiber.</p>
+            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 20px;">Schedule Laundry</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Tuxedo Rentals</h3>
+            <p>Premium fits and professional styling for your most important events.</p>
+            <a href="tel:5124762850" class="cta-btn" style="font-size: 0.7rem; margin-top: 20px;">Rent Your Suit</a>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="section-padding testimonials">
+    <h2 class="section-title" style="color: #fff;">Client Praise</h2>
+    <div class="grid">
+        <div class="t-card">
+            <div class="stars">★★★★★</div>
+            <p>"Saved my suit in 1 hour before a big meeting. Absolute lifesavers!" - Sarah M.</p>
+        </div>
+        <div class="t-card">
+            <div class="stars">★★★★★</div>
+            <p>"The only place I trust with my wedding dress and tux rentals." - David R.</p>
+        </div>
+        <div class="t-card">
+            <div class="stars">★★★★★</div>
+            <p>"Best laundry service in Austin. Quick, clean, and reliable." - Linda K.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-padding contact-section">
+    <h2 class="section-title">Request a Quote</h2>
+    <div class="form-container">
+        <form action="https://formspree.io/f/estradacleaners@yahoo.com" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Mobile Number" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option>1-Hour Cleaning</option>
+                <option>Laundry</option>
+                <option>Tuxedo Rental</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="How can we help?"></textarea>
+            <button type="submit" class="cta-btn" style="width: 100%; margin: 0;">SEND REQUEST</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-item">
+            <div class="logo" style="color: #fff; margin-bottom: 20px;">ESTRADA'S</div>
+            <p>Quality garment care and professional styling for the Austin community since 1960.</p>
+        </div>
+        <div class="footer-item">
+            <h3>LOCATION</h3>
+            <p><i class="fa-solid fa-location-dot"></i> 301 N Main St, Austin, TX 78702</p>
+            <p><i class="fa-solid fa-phone"></i> (512) 476-2850</p>
+            <p><i class="fa-solid fa-envelope"></i> estradacleaners@yahoo.com</p>
+        </div>
+        <div class="footer-item">
+            <h3>HOURS</h3>
+            <p>Mon - Fri: 7:00 AM - 6:00 PM</p>
+            <p>Sat: 8:00 AM - 4:00 PM</p>
+            <p>Sun: Closed</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px; opacity: 0.5; font-size: 0.8rem;">
+        &copy; 2026 Estrada's Austin. All Rights Reserved.
+    </div>
+</footer>
+
+<a href="https://wa.me/15124762850" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i></a>
+
+</body>
+</html>
